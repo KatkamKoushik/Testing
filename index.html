@@ -23,15 +23,117 @@
 <link rel='stylesheet' href="style.css" />
 <script src="script.js" defer></script>
 <style>
+  /* Hide loader and transition elements */
   .js-loader, .js-page-transition, .loader, .bubbles-container, .js-loader\:progress, .loader__sprite-container { display: none !important; opacity: 0 !important; visibility: hidden !important; }
+  /* Allow normal scrolling */
   html, body { overflow-y: auto !important; height: auto !important; }
-  .scroll-container * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
-  .scroll-container, .js-section-space, .js-section-sky, .js-section-underwater, .landing-ui, .home-scrolling-area * { position: relative !important; height: auto !important; min-height: 10vh !important; top: auto !important; bottom: auto !important; }
-  body { background-color: #111111 !important; color: #ffffff !important; }
   html.is-loading body { overflow: auto !important; pointer-events: auto !important; }
+  /* Force all scroll-container children to be visible */
+  .scroll-container * { opacity: 1 !important; visibility: visible !important; }
+  /* Override the JS-driven scroll/fixed layout to a normal static layout */
+  .scroll-container { height: auto !important; overflow: visible !important; position: static !important; }
+  .home-scrolling-area { height: auto !important; min-height: 100vh !important; position: relative !important; display: flex !important; align-items: center !important; pointer-events: auto !important; }
+  .landing-ui { position: relative !important; height: auto !important; min-height: 60vh !important; top: auto !important; left: auto !important; padding: 4rem 5% !important; width: auto !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+  /* Section-specific background colours */
+  .js-section-space { background: linear-gradient(180deg, #0a0a15 0%, #111133 100%) !important; }
+  .js-section-sky   { background: linear-gradient(180deg, #0a1a3a 0%, #1a3a6a 50%, #2a5a8a 100%) !important; }
+  .js-section-underwater { background: linear-gradient(180deg, #0a2a3a 0%, #0d3a4a 50%, #0f2a3a 100%) !important; }
+  /* Body dark background */
+  body { background-color: #111111 !important; color: #ffffff !important; }
+  /* Header pointer events */
+  .header { pointer-events: auto !important; }
+  .pointer-events-none { pointer-events: auto !important; }
+  .pointer-events-auto { pointer-events: auto !important; }
+  /* Make landing-title containers full-width and accessible */
+  .landing-title__container { position: relative !important; top: auto !important; opacity: 1 !important; transform: none !important; max-width: 1200px; margin: 0 auto; width: 100%; }
+  /* Fix canvas - hide WebGL canvas (no JS renderer available) */
+  canvas#webgl { display: none !important; }
+  /* SVG icon sizing */
+  .header__logo { width: 148px; height: 14px; fill: #fff; }
+  .footer__logo { width: 105px; height: 10px; fill: #fff; }
+  .footer__icon { width: 20px; height: 20px; fill: #fff; }
+  .scroll-icon { width: 9px; height: 6px; fill: #fff; }
+  .button__svg { width: 100%; height: 100%; fill: currentColor; }
+  .currency-dropdown__chevron { width: 10px; height: 6px; fill: currentColor; display: inline-block; }
+  /* Ensure SVG icons in buttons are visible */
+  svg { display: inline-block; vertical-align: middle; }
+  /* Fix rotate-phone overlay - hide on desktop */
+  .rotate-phone { display: none !important; }
+  /* Audio button */
+  .audio-button { position: fixed; bottom: 20px; right: 20px; z-index: 50; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; width: 40px; height: 40px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  /* Menu */
+  .menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #111; z-index: 200; }
+  .menu.is-open { display: block !important; }
+  /* Reassurance icons */
+  .landing-ui_reassurance ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 1rem; justify-content: center; }
+  .landing-ui_reassurance li { display: flex; flex-direction: column; align-items: center; font-size: 0.75rem; text-transform: uppercase; }
+  .landing-ui_reassurance img { width: 48px; height: 48px; object-fit: contain; margin-bottom: 0.5rem; }
 </style>
 </head>
-<body class="">
+<body class="js">
+
+<!-- SVG Sprite Definitions -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-hidden="true">
+  <defs>
+    <!-- Organimo logo wordmark -->
+    <symbol id="logo" viewBox="0 0 148 14">
+      <text x="0" y="12" font-family="serif" font-size="13" font-weight="600" letter-spacing="2" fill="currentColor">ORGANIMO</text>
+    </symbol>
+    <!-- Cart icon -->
+    <symbol id="cart" viewBox="0 0 20 20">
+      <path d="M1 1h3l1.5 9h10l1.5-6H5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="8" cy="17" r="1.5" fill="currentColor"/>
+      <circle cx="14" cy="17" r="1.5" fill="currentColor"/>
+    </symbol>
+    <!-- Chevron bottom (down arrow) -->
+    <symbol id="chevron-bottom" viewBox="0 0 14 8">
+      <path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Chevron right -->
+    <symbol id="chevron-right" viewBox="0 0 8 14">
+      <path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Chevron double (expand / collapse) -->
+    <symbol id="chevron-double" viewBox="0 0 14 14">
+      <path d="M1 5l6-4 6 4M1 9l6 4 6-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Scroll indicator -->
+    <symbol id="scroll" viewBox="0 0 12 12">
+      <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <path d="M6 3v6M4 7l2 2 2-2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Audio on -->
+    <symbol id="audio-on" viewBox="0 0 20 16">
+      <path d="M3 5H1v6h2l5 4V1L3 5z" fill="currentColor"/>
+      <path d="M14 2a8 8 0 010 12M11 5a4 4 0 010 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <!-- Audio off -->
+    <symbol id="audio-off" viewBox="0 0 20 16">
+      <path d="M3 5H1v6h2l5 4V1L3 5z" fill="currentColor"/>
+      <path d="M13 5l4 6M17 5l-4 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <!-- Facebook -->
+    <symbol id="facebook" viewBox="0 0 20 20">
+      <path d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v5h4v-5h3l1-4h-4V6a1 1 0 011-1h3V2z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Instagram -->
+    <symbol id="instagram" viewBox="0 0 20 20">
+      <rect x="2" y="2" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <circle cx="15.5" cy="4.5" r="1" fill="currentColor"/>
+    </symbol>
+    <!-- TikTok -->
+    <symbol id="tiktok" viewBox="0 0 20 20">
+      <path d="M10 2v10a3 3 0 103-3v-3a6 6 0 01-3-.9V2h-3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <!-- Rotate phone -->
+    <symbol id="rotate-phone" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="10" height="16" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+      <path d="M8 19h4M18 6a6 6 0 010 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M16 16l2 2 2-2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
 
 <header class="header pointer-events-none | container-fluid d-flex items-center justify-between py-12 py-20@sm py-30@md | js-header">
 <div class="d-none d-flex@md items-center pointer-events-auto">
