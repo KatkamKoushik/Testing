@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+
+
+
+
+
+<link rel="preload" href="https://organimo.com/wp-content/themes/organimo/public/images/atlas.png" as="image" fetchpriority="high" type="image/png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cea1^54">
+<meta name="msapplication-TileColor" content="#e7e6f0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<link rel='stylesheet' id='main-style-css' href="woocommerce/style-70bb85ec.css" media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css' href="woocommerce/wc-blocks.css" media='all' />
+<link rel='stylesheet' id='woocommerce-multi-currency-css' href="woocommerce/woocommerce-multi-currency.min.css" media='all' />
+<link rel='stylesheet' href="style.css" />
+<script src="script.js" defer></script>
+<style>
+  .js-loader, .js-page-transition, .loader, .bubbles-container, .js-loader\:progress, .loader__sprite-container { display: none !important; opacity: 0 !important; visibility: hidden !important; }
+  html, body { overflow-y: auto !important; height: auto !important; }
+  .scroll-container * { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+  .scroll-container, .js-section-space, .js-section-sky, .js-section-underwater, .landing-ui, .home-scrolling-area * { position: relative !important; height: auto !important; min-height: 10vh !important; top: auto !important; bottom: auto !important; }
+  body { background-color: #111111 !important; color: #ffffff !important; }
+  html.is-loading body { overflow: auto !important; pointer-events: auto !important; }
+</style>
+</head>
+<body class="">
+
+<header class="header pointer-events-none | container-fluid d-flex items-center justify-between py-12 py-20@sm py-30@md | js-header">
+<div class="d-none d-flex@md items-center pointer-events-auto">
+<a class="button relative t-fractif d-inline-block t-dark-gray js-button button--simple button--nav js-header:dynamicLink" data-audio-enter="audio.hover" href="https://organimo.com/seamoss/" data-shop-link="https://organimo.com/seamoss/">
+<span class="button--simple__bg"></span>
+<span class="button__text | d-flex justify-center relative z-10">
+<span class="relative js-button-text">
+<span class="d-block js-header:shopLink">Shop</span>
+<span class="d-block button--nav__alt-text srp js-header:homeLink">Home</span>
+</span>
+</span>
+<div class="button__glow absolute z-negative"></div>
+</a>
+<nav class="navigation | js-nav" aria-label="Main navigation">
+<ul role="menubar" class="d-flex items-center m-0 p-0">
+<li role="none" class="list-unstyled d-inline-block ml-15 ml-20@md">
+<a href="https://organimo.com/affirm/" class="link header__link | js-header:link d-block |  " data-audio-enter="audio.hover" role="menuitem">
+<span class="d-block">Affirm</span>
+<span class="d-block" aria-hidden="true">Affirm</span>
+</a>
+</li>
+<li role="none" class="list-unstyled d-inline-block ml-15 ml-20@md">
+<a href="https://organimo.com/news/" class="link header__link | js-header:link d-block |  " data-audio-enter="audio.hover" role="menuitem">
+<span class="d-block">News</span>
+<span class="d-block" aria-hidden="true">News</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="d-flex items-center d-none@md pointer-events-auto">
+<button class="button relative t-fractif d-inline-block t-dark-gray js-button button--circle bg-white | js-menu-toggle" aria-controls="menu-toggle" type="button" aria-label="Menu">
+<span class="button--simple__bg"></span>
+<span class="button__text | d-flex justify-center relative z-10">
+<span class="relative js-button-text">
+<svg class="header__toggle" width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect class="js-menu-toggle:firstLine" y="0.75" width="14" height="1.5" rx="0.75" fill="#2D2F36"/>
+<rect class="js-menu-toggle:secondLine" y="5.25" width="14" height="1.5" rx="0.75" fill="#2D2F36"/>
+<rect class="js-menu-toggle:lastLine" y="9.75" width="14" height="1.5" rx="0.75" fill="#2D2F36"/>
+</svg>
+</span>
+</span>
+<div class="button__glow absolute z-negative"></div>
+</button>
+</div>
+<a class="absolute center-xy d-inline-flex pointer-events-auto | js-header:logo" href="https://organimo.com" aria-label="Back to homepage" tabindex="-1">
+<svg aria-hidden="true" class='header__logo'>
+<use xlink:href="#logo"></use>
+</svg>
+</a>
+<div class="d-flex items-center pointer-events-auto">
+<a class="header__link link d-none d-block@md | js-header:link js-header:loginLink " data-audio-enter="audio.hover" href="https://organimo.com/my-account/">
+<span class="d-block"><span class="js-account-btn">Login</span></span>
+<span class="d-block" aria-hidden="true"><span class="js-account-btn">Login</span></span>
+</a>
+<div class="currency-dropdown relative ml-5 ml-14@md ml-20@md pointer-events-auto | js-currency-parent">
+<div class="currency-dropdown__inner | js-currency-outline">
+<button class="button relative t-fractif d-inline-block t-dark-gray js-button button--currency header__link | js-currency-toggle" aria-controls="currency-toggle" type="button">
+<span class="button--simple__bg"></span>
+<span class="button__text | d-flex justify-center relative z-10">
+<span class="relative js-button-text">
+USD
+<svg aria-hidden="true" class='currency-dropdown__chevron'>
+<use xlink:href="#chevron-bottom"></use>
+</svg>
+</span>
+</span>
+<div class="button__glow absolute z-negative"></div>
+</button>
+<ul id="currency-toggle" class="currency-dropdown__list mb-0 list-unstyled">
+<div class="currency-dropdown__divider | js-currency-divider"></div>
+<li>
+<a href="/?wmc-currency=USD" data-audio-enter="audio.hover" data-router-disabled class="header__link  is-active  | js-currency-link">
+USD &#36;
+</a>
+</li>
+<li>
+<a href="/?wmc-currency=CAD" data-audio-enter="audio.hover" data-router-disabled class="header__link  | js-currency-link">
+CAD &#36;
+</a>
+</li>
+<li>
+<a href="/?wmc-currency=GBP" data-audio-enter="audio.hover" data-router-disabled class="header__link  | js-currency-link">
+GBP &pound;
+</a>
+</li>
+<li>
+<a href="/?wmc-currency=EUR" data-audio-enter="audio.hover" data-router-disabled class="header__link  | js-currency-link">
+EUR &euro;
+</a>
+</li>
+<li>
+<a href="/?wmc-currency=AUD" data-audio-enter="audio.hover" data-router-disabled class="header__link  | js-currency-link">
+AUD &#36;
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="relative d-flex">
+<a class="header-btn header-btn--circle relative t-fractif d-inline-block t-dark-gray ml-5 ml-10@md" data-audio-enter="audio.hover" href="https://organimo.com/cart/">
+<div class="header-btn__bg"></div>
+<div class="header-btn__hover-bg"></div>
+<div class="header-btn__el" aria-label="Cart">
+<svg aria-hidden="true" class='header__cart-icon'>
+<use xlink:href="#cart"></use>
+</svg>
+</div>
+<div class="header__cart-count d-flex justify-center items-center">
+<div class="t-fractif t-12 t-14@md t-white | js-cart-count">0</div>
+</div>
+</a>
+</div>
+</div>
+<div id="menu-toggle" class="menu px-20 pt-120 pb-15 pointer-events-auto">
+<div class="menu__inner px-20">
+<ul class="menu__links list-unstyled mt-20" role="menu">
+<li role="none">
+<a href="/" role="menuitem">Home</a>
+</li>
+<li role="none" class="mt-16">
+<a href="https://organimo.com/seamoss/" role="menuitem">Shop Organimo®</a>
+</li>
+<li role="none" class="mt-16">
+<a href="https://organimo.com/my-account/" role="menuitem"><span class="js-account-btn-mob">Login<span class="mx-8">/</span>Sign up</span></a>
+</li>
+<li role="none" class="mt-16">
+<a href="https://organimo.com/affirm/" class="" role="menuitem">
+Affirm
+</a>
+</li>
+<li role="none" class="mt-16">
+<a href="https://organimo.com/news/" class="" role="menuitem">
+News
+</a>
+</li>
+</ul>
+</div>
+<div class="menu__credits d-flex justify-between pt-50">
+<span>Organimo®</span>
+<span>©2026</span>
+</div>
+</div>
+</header>
+<main class="scroll-container">
+<div data-taxi>
+<div data-taxi-view="home" class="" >
+<div class="home js-home">
+<div class="js-section-space home-scrolling-area">
+<div class="landing-title__container landing-title__side">
+<div id="0-space" class="js-space-landing-ui landing-ui space-0">
+<div class="landing-title__container landing-title__side d-flex flex-column flex-row@md justify-start justify-between@md  items-end@md w-1/1 w-6/7@md">
+<div class="landing-title__container_headlines mb-25 mb-40@sm mb-0@md ">
+<div class="landing-title__subheading t-ls-2"><span class="dot"></span> <p>From body</p> <span class="bordered">to mind</span></div>
+<div class="landing-title__text ">
+<div class="js-home:titles">
+<div class="headline t-mauren ">Li<em>m</em>itless</div>
+<div class="headline__bottom t-manrope ">begins here.</div>
+</div>
+</div>
+</div>
+<div class="landing-title__container_cta">
+<div class="tagline d-flex mb-20@md">
+<span class="dot mr-8 mr-0@md absolute@md"></span>
+<p class="t-manrope t-14 t-18@sm t-24@md bold mb-0">Journey into the <span class="t-mauren t-italic">wonderful <br> world </span> of Organimo®</p>
+</div>
+<div class="cta d-flex items-center t-manrope">
+<p class="mb-0 mr-15 t-14 t-uppercase t-ls-2 d-none d-block@md bold">scroll to begin</p>
+<button class="scroll-cta relative@md absolute"><div class="scroll-cta__inner absolute fill d-flex items-center justify-center"><svg aria-hidden="true" class='scroll-icon'>
+<use xlink:href="#scroll"></use>
+</svg></div></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="js-section-sky home-scrolling-area">
+<div id="0-sky" class="js-sky-landing-ui landing-ui sky-0">
+<div class="landing-title__container landing-title__center">
+<div class="landing-title__subheading">Sea moss & bladderwrack</div>
+<div class="landing-title__text landing-title__text--special-case centered js-home:titles">The only natural multivitamin you will <i>e</i><em>v</em><strong>er</strong> <em>n</em><strong>eed.</strong></div>
+<a class="button relative t-fractif d-inline-block t-dark-gray js-button button--icon button--glow bg-white" href="/seamoss/" data-audio-enter="audio.hover" icon="arrow" animate-from="preset: 'buttonIn'">
+<span class="button--simple__bg"></span>
+<span class="button__text | d-flex justify-center relative z-10">
+<span class="relative js-button-text">
+Shop now
+</span>
+</span>
+<div class="absolute fill overflow-hidden z-10">
+<div class="button__icon | left absolute -x-100">
+<div class="button__icon-inner | absolute fill">
+<svg aria-hidden="true" class='center-y button__svg'>
+<use xlink:href="#chevron-right"></use>
+</svg>
+</div>
+</div>
+<div class="button__icon | absolute right">
+<div class="button__icon-inner | absolute fill | js-button-icon">
+<svg aria-hidden="true" class='center-y button__svg'>
+<use xlink:href="#chevron-right"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="button__glow absolute z-negative"></div>
+</a>
+</div>
+<div class="landing-title__container landing-title__side _sub-content">
+<div class="landing-title__subheading t-ls-2"><span class="bordered">superfood</span> goodness</div>
+<p class="max-w-300 t-14 t-18@sm t-24@md t-lh-1.5 t-lh-1.2@sm">Organimo® contains a blend of two nutrient rich superfoods: Sea Moss and Bladderwrack.</p>
+</div>
+</div>
+<div id="1-sky" class="js-sky-landing-ui landing-ui sky-1">
+<div class="landing-title__container landing-title__center">
+<div class="landing-title__subheading">100% ethical & renewable</div>
+<div class="landing-title__text centered js-home:titles">All naturally sourced <strong>marine</strong> <strong>i<em>n</em>gredients</strong> from Canada.</div>
+</div>
+<div class="landing-title__container landing-title__side _centered _sub-content">
+<div class="landing-title__subheading t-ls-2"><span class="bordered">Highest quality</span>  ingredients</div>
+<p class="max-w-670">We value sourcing our plants from the highest-grade regions that are clean and 100% natural. Our algae plants grow naturally on marine beds and rocks.</p>
+</div>
+</div>
+</div>
+<div class="js-section-underwater home-scrolling-area">
+<div id="0-underwater" class="js-underwater-landing-ui landing-ui underwater-0">
+<div class="landing-title__container landing-title__side d-flex flex-column flex-row@md justify-start justify-between@md  items-end@md w-1/1 w-6/7@md">
+<div class="landing-title__container_headlines mb-25 mb-40@sm mb-0@md ">
+<div class="landing-title__text ">
+<div class="js-home:titles">
+<div class="headline t-mauren">T<em>h</em>e real</div>
+<div class="headline__bottom t-manrope">limitless pill.</div>
+</div>
+</div>
+</div>
+<div class="landing-title__container_cta _sub-content ">
+<div class="tagline">
+<p class="landing-title__subheading t-ls-2 mb-18@md">discover the <span class="bordered">benefits</span></p>
+<p class="max-w-360 t-14 t-lh-22 t-18@sm t-lh-24@sm t-24@md t-lh-30@md mb-0">Taking Organimo® has a number of health benefits, continue on the journey to find out more.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="1-underwater" class="js-underwater-landing-ui landing-ui underwater-1">
+<div class="landing-title__container landing-title__center last">
+<div class="landing-title__subheading">the miracle of the sea</div>
+<div class="landing-title__text centered centered--wildcrafted js-home:titles">100% wildcrafted and <strong>raw herbs.</strong></div>
+<div class="landing-ui_reassurance">
+<ul>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/vegan-icon.png" alt="" aria-hidden="true">
+<p>vegan</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/canada-icon.png" alt="" aria-hidden="true">
+<p>harvested in canada</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/gmo-icon.png" alt="" aria-hidden="true">
+<p>non gmo</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/gluten-icon.png" alt="" aria-hidden="true">
+<p>gluten free</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/preservatives-icon.png" alt="" aria-hidden="true">
+<p>no preserv&shy;atives</p>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/usa-icon.png" alt="" aria-hidden="true">
+<p>made in usa</p>
+</li>
+</ul>
+<ul class="copy">
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/vegan-icon.png" alt="" aria-hidden="true">
+<p>vegan</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/canada-icon.png" alt="" aria-hidden="true">
+<p>harvested in canada</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/gmo-icon.png" alt="" aria-hidden="true">
+<p>non gmo</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/gluten-icon.png" alt="" aria-hidden="true">
+<p>gluten free</p>
+</li>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/preservatives-icon.png" alt="" aria-hidden="true">
+<p>no preserv&shy;atives</p>
+<li>
+<img src="https://organimo.com/wp-content/themes/organimo/public/images/usa-icon.png" alt="" aria-hidden="true">
+<p>made in usa</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="2-underwater" class="js-underwater-landing-ui landing-ui underwater-2">
+<div class="landing-title__container landing-title__side d-flex flex-column flex-row@md justify-start justify-between@md  items-end@md w-1/1 w-6/7@md">
+<div class="landing-title__container_headlines mb-16 mb-24@sm mb-0@md ">
+<div class="landing-title__text ">
+<div class="js-home:titles">
+<div class="headline t-mauren">A better y<em>o</em>u</div>
+<div class="headline__bottom t-manrope">starts here</div>
+</div>
+</div>
+</div>
+<div class="landing-title__container_cta">
+<div class="tagline">
+<p class="t-14 t-lh-22 t-18@sm t-lh-24@sm t-24@md t-lh-30@md mb-16 mb-19@sm mb-30@md">The ocean’s best kept secret. Feel supercharged with our herbal blend of marine ingredients.</p>
+<a class="button relative t-fractif d-inline-block t-dark-gray js-button button--icon button--glow bg-white mb-5 mb-14@sm mb-0@md" href="/seamoss/" icon="arrow" data-audio-enter="audio.hover" animate-from="preset: 'buttonIn'">
+<span class="button--simple__bg"></span>
+<span class="button__text | d-flex justify-center relative z-10">
+<span class="relative js-button-text">
+Shop now
+</span>
+</span>
+<div class="absolute fill overflow-hidden z-10">
+<div class="button__icon | left absolute -x-100">
+<div class="button__icon-inner | absolute fill">
+<svg aria-hidden="true" class='center-y button__svg'>
+<use xlink:href="#chevron-right"></use>
+</svg>
+</div>
+</div>
+<div class="button__icon | absolute right">
+<div class="button__icon-inner | absolute fill | js-button-icon">
+<svg aria-hidden="true" class='center-y button__svg'>
+<use xlink:href="#chevron-right"></use>
+</svg>
+</div>
+</div>
+</div>
+<div class="button__glow absolute z-negative"></div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="audio-button | js-audio-button" data-audio-enter="audio.hover">
+<span class="audio-button__inner d-block">
+<svg aria-hidden="true" class='js-audio-button:on'>
+<use xlink:href="#audio-on"></use>
+</svg>
+<svg aria-hidden="true" class='js-audio-button:off'>
+<use xlink:href="#audio-off"></use>
+</svg>
+</span>
+</button>
+<footer class="footer home-footer container pb-9 pb-20@sm">
+<div class="relative">
+<div class="bg-black d-flex justify-between justify-center@md pointer-events-none@md items-center pt-20 pt-40@md pb-20 pb-70@1840 relative z-10 js-home-toggle pl-22 pr-22" aria-controls="footer-toggle">
+<button class="icon relative bg-black d-block d-none@md">
+<div class="absolute fill z-10 | js-icon-button:icon">
+<svg aria-hidden="true" class='center-y absolute top left icon__svg'>
+<use xlink:href="#chevron-double"></use>
+</svg>
+</div>
+<div class="icon__inner z-10 | absolute fill | js-icon-button:hoverIcon">
+<svg aria-hidden="true" class='center-y absolute top left icon__svg'>
+<use xlink:href="#chevron-double"></use>
+</svg>
+</div>
+<div class="icon__bg | absolute fill | js-icon-button:bg">
+</div>
+</button>
+<div class="d-flex justify-center items-center">
+<div class="footer__mark"></div>
+<svg aria-hidden="true" class='fill-white footer__logo'>
+<use xlink:href="#logo"></use>
+</svg>
+</div>
+<button class="icon relative bg-black negative d-block d-none@md">
+<div class="absolute fill z-10 | js-icon-button:icon">
+<svg aria-hidden="true" class='center-y absolute top left icon__svg'>
+<use xlink:href="#chevron-double"></use>
+</svg>
+</div>
+<div class="icon__inner z-10 | absolute fill | js-icon-button:hoverIcon">
+<svg aria-hidden="true" class='center-y absolute top left icon__svg'>
+<use xlink:href="#chevron-double"></use>
+</svg>
+</div>
+<div class="icon__bg | absolute fill | js-icon-button:bg">
+</div>
+</button>
+</div>
+<div class="container d-none d-block@md bg-black relative z-0" id="footer-toggle">
+<div class="d-flex flex-wrap items-end justify-center justify-between@1840 pb-20 pb-30@sm">
+<div class="w-1/1 w-auto@md w-10/32@1840 d-flex justify-center justify-end@md justify-start@1840 pr-20@md pr-0@1840 | order-1">
+<div class="d-none d-block@1840">
+<ul class="d-flex list-unstyled m-0 fill-white fill-light-gray@md">
+<li class="mr-16 mr-20@md"><a href="https://facebook.com/SeaMossbyOrganimo" target="_blank" rel="noopener"><svg aria-hidden="true" class='footer__icon'>
+<use xlink:href="#facebook"></use>
+</svg></a></li>
+<li class="mr-16 mr-20@md"><a href="https://instagram.com/organimo" target="_blank" rel="noopener"><svg aria-hidden="true" class='footer__icon'>
+<use xlink:href="#instagram"></use>
+</svg></a></li>
+<li><a href="https://www.tiktok.com/@organimo" target="_blank" rel="noopener"><svg aria-hidden="true" class='footer__icon'>
+<use xlink:href="#tiktok"></use>
+</svg></a></li>
+</ul>
+</div>
+<ul class="d-flex list-unstyled m-0 mb-24@sm mb-0@md flex-column flex-row@sm items-center">
+<li class="ml-40@1840 mb-20 mb-0@sm">
+<a href="mailto:support@organimo.com" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">Contact</span>
+<span class="d-block" aria-hidden="true">Contact</span>
+</a>
+</li>
+<li class="ml-40@sm mb-20 mb-0@sm">
+<a href="https://organimo.com/wholesale/" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">Wholesale</span>
+<span class="d-block" aria-hidden="true">Wholesale</span>
+</a>
+</li>
+<li class="ml-40@sm mb-20 mb-0@sm">
+<a href="https://organimo.com/returns-policy/" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">Returns policy</span>
+<span class="d-block" aria-hidden="true">Returns policy</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="w-1/1 w-28/32@sm w-20/32@md w-18/32@lg w-10/32@1840 w-11/32@xxlg t-12 t-14@sm t-light-gray t-center mt-30@md mt-0@1840 max-w-400 max-w-1/1@sm | order-3 order-2@1840">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.</div>
+<div class="w-1/1 w-auto@md w-10/32@1840 d-flex justify-center justify-start@md justify-end@1840 mb-30 mb-0@md pl-20@md pl-0@1840 | order-2 order-3@1840">
+<ul class="d-flex list-unstyled flex-column flex-row@sm items-center m-0 trim-vertical">
+<li class="mb-20 mb-0@sm d-none@1840">
+<a href="https://organimo.com/news/" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">News</span>
+<span class="d-block" aria-hidden="true">News</span>
+</a>
+</li>
+<li class="ml-40@sm mb-20 mb-0@sm">
+<a href="https://organimo.com/disclaimer/" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">Disclaimer</span>
+<span class="d-block" aria-hidden="true">Disclaimer</span>
+</a>
+</li>
+<li class="ml-40@sm mb-20 mb-0@sm">
+<a href="https://organimo.com/privacy-policy/" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">Privacy policy</span>
+<span class="d-block" aria-hidden="true">Privacy policy</span>
+</a>
+</li>
+<li class="ml-40@sm mb-20 mb-0@sm">
+<a href="https://organimo.com/terms-of-service/" class="t-fractif link t-uppercase t-ls-2 t-no-underline t-white t-12 t-14@1840">
+<span class="d-block">Terms of service</span>
+<span class="d-block" aria-hidden="true">Terms of service</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="d-block d-none@1840 d-flex justify-center w-1/1 mt-26 mt-30@sm | order-4">
+<ul class="d-flex list-unstyled m-0 fill-white fill-light-gray@md">
+<li class="mr-16 mr-20@md"><a href="https://facebook.com/SeaMossbyOrganimo" target="_blank" rel="noopener"><svg aria-hidden="true" class='footer__icon'>
+<use xlink:href="#facebook"></use>
+</svg></a></li>
+<li class="mr-16 mr-20@md"><a href="https://instagram.com/organimo" target="_blank" rel="noopener"><svg aria-hidden="true" class='footer__icon'>
+<use xlink:href="#instagram"></use>
+</svg></a></li>
+<li><a href="https://www.tiktok.com/@organimo" target="_blank" rel="noopener"><svg aria-hidden="true" class='footer__icon'>
+<use xlink:href="#tiktok"></use>
+</svg></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</main>
+<canvas id="webgl" class="fixed fill z-negative" style="opacity: 0; visibility: hidden;"></canvas>
+<div id="css3d" class="fixed fill pointer-events-none"></div>
+<!--    Bubbles     -->
+<div class="bubbles-container">
+<div id="js-bubble-0" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Energy Levels</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">Rich in vitamins and minerals like iron that increase
+energy levels.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Anti-Inflammatory properties reduce risk of fatigue.
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-1" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Immune Support</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">Anti-aging, anti-bacterial, anti-inflammatory and
+anti-viral.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Boosts immunity by cleansing blood, removing toxins
+and lowering inflammation in the body.</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-2" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Cognitive Function</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">High magnesium and potassium levels work together to
+impact brain health.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Increases cognitive function, focus, memory and
+boosts mood.</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-3" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Skin Health</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">Anti-aging, collagen production, reduces acne, hydrates
+skin and decreases excessive sebum oil in the skin.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Helps with severe skin conditions like eczema and
+psoriasis.</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-4" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Sexual health</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">Men: Improves libido, boosts sex drive, helps erectile
+dysfunction, increases quantity and quality of sperm.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Women: Improves libido, boosts sex drive, increases
+fertility, helps manage and better hormonal and menstrual problems.</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-5" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Respiratory Health</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">Removes mucus from the body, improves breathing and
+boosts overall lung function.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Natural decongestants and demulcent herbs, protect
+and soothe the bronchial system, inflamed tissues and lung tubes.</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-6" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Heart Health</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">High in omega-3 fatty acids, fiber and potassium.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Helps lower risk of heart disease, diabetes, blood
+clots, high cholesterol, and high blood pressure.</div>
+</div>
+</div>
+</div>
+</div>
+<div id="js-bubble-7" class="bubble">
+<div class="bubble__inner">
+<div class="bubble__init js-bubble-init">
+<div class="bubble__title">Digestive Health</div>
+<div class="bubble__icon js-bubble-icon">
+<div class="bubble__plus">+</div>
+</div>
+</div>
+<div class="bubble__content js-bubble-content">
+<div class="bubble__borderEl">
+<div class="top"></div>
+<div class="center">
+<div class="center__sides"></div>
+</div>
+<div class="bottom"></div>
+</div>
+<div class="bubble__border bubble__border__top bubble__top">
+<div class="bubble__number bubble__number__top">01</div>
+<div class="bubble__text bubble__text__top">Natural prebiotic supplement.</div>
+</div>
+<div class="bubble__border bubble__border__bottom bubble__bottom">
+<div class="bubble__number bubble__number__bottom">02</div>
+<div class="bubble__text bubble__text__bottom">Improves gut health, digestion, weight loss and
+promotes a healthy colon.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rotate-phone"><div class="d-flex flex-column items-center justify-center"><svg aria-hidden="true" class='rotate-phone__svg fill-accent-gold'>
+<use xlink:href="#rotate-phone"></use>
+</svg><div class="t-16 t-white">Please rotate your device to portrait</div></div></div>
+
+
+
+
+
+
+<script id="gla-gtag-events-js-extra">
+var glaGtagData = {"currency_minor_unit":"2","products":[]};
+</script>
+
+
+</body>
+</html><!-- WP Fastest Cache file was created in 0.560 seconds, on March 15, 2026 @ 1:42 pm --><!-- via php -->
